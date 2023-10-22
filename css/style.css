@@ -1952,7 +1952,9 @@ content
 
 /* line 28, ../scss/_content.scss */
 .art-card.art-fluid-card {
-  height: calc(100% - 30px);
+    height: calc(100% - 30px);
+    color: #bdb5b5;
+    font-size: 12px;
 }
 
 /* ----- banner ----- */

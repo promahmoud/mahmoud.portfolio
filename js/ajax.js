@@ -11,7 +11,7 @@ $(document).on("click", '.open_modal', function (e) {
     url: url,
     dataType: "html",
     beforeSend: function (xhr) {
-      xhr.setRequestHeader("Authorization", "Bearer 6QXNMEMFHNY4FJ5ELNFMP5KRW52WFXN5")
+      xhr.setRequestHeader("Authorization", "Bearer")
     },
     success: function (data) {
       // alert(data);
@@ -31,15 +31,16 @@ $(document).on("click", '.open_modal', function (e) {
     // slider works
     // $('.art-app-wrapper').addClass('modalBlur'); 
 
-    var modal_swiper = new Swiper(`.${data_class_name} .modal-works-slider`, {
+    const modal_swiper = new Swiper(`.${data_class_name} .modal-works-slider`, {
       slidesPerView: 3,
       spaceBetween: 30,
       observer: true,
       observeParents: true,
       speed: 1600,
-      autoplay: {
-        delay: 4000,
-      },
+      // autoplay: {
+      //   delay: 4000,
+      // },
+      autoplay: false,
       autoplaySpeed: 5000,
       pagination: {
         el: ".swiper-pagination-modal",
@@ -62,18 +63,18 @@ $(document).on("click", '.open_modal', function (e) {
       },
 
 
-    },modal_swiper);
-    console.log(`${modal_swiper} swiper looded`);
+    });
+    // console.log(`${modal_swiper} swiper looded`);
 
     
     // pause swiper slide when hove on -->
-    $(`.${data_class_name} .modal-works-slider`).hover(function () {
-      modal_swiper.autoplay.stop();
-      // console.log('slider stopped');
-    }, function () {
-      modal_swiper.autoplay.start();
-      // console.log('slider started again');
-    });
+    // $(`.${data_class_name} .modal-works-slider`).hover(function () {
+    //   modal_swiper.autoplay.stop();
+    //   // console.log('slider stopped');
+    // }, function () {
+    //   modal_swiper.autoplay.start();
+    //   // console.log('slider started again');
+    // });
     // https://stackoverflow.com/questions/47238245/stop-swiper-slide-autoplay-on-mouse-enter-and-start-autoplay-on-mouse-leave
 
 
